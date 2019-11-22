@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Flights
+
+    <a data-toggle="collapse" href="#user_flights_new_form">
+      Add flight
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @user.flights.each do |flight| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/flights/<%= flight.id %>">
+          <%= flight.description %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>
