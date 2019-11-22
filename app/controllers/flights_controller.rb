@@ -10,7 +10,7 @@ class FlightsController < ApplicationController
   end
 
   def index
-    @flights = Flight.all
+    @flights = Flight.page(params[:page]).per(10)
 
     render("flight_templates/index.html.erb")
   end
