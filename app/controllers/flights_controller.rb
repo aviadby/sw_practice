@@ -44,7 +44,7 @@ class FlightsController < ApplicationController
 
     @flight.description = params.fetch("description")
     @flight.depart = params.fetch("depart")
-    @flight.user_id = params.fetch("user_id")
+    
 
     if @flight.valid?
       @flight.save
